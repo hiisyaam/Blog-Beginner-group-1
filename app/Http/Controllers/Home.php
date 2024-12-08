@@ -13,4 +13,8 @@ class Home extends Controller
     public function tiga_orang(){
         return view('tiga_orang');
     }
+
+    public function siapaAku(){
+        return view('profile.siapa_aku');
+    }
 }

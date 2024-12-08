@@ -5,10 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 
 
-
-
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -19,4 +17,5 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 Route::get('/', [Home::class, 'index']);
-Route::get('/profile', [Home::class, 'tiga_orang']);
+Route::get('/aslinyaTiga', [Home::class, 'tiga_orang']);
+Route::get('/siapaAku', [Home::class, 'siapaAku'])->middleware('auth', 'verified');

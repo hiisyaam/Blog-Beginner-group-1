@@ -43,9 +43,15 @@
                         <p>Ada Apa Hari Ini?</p>
                     </a>
                     <ul class="nav">
-                        <li><a href="/profile">Kita Aslinya 3</a></li>
+                        <li><a href="/aslinyaTiga">Kita Aslinya 3</a></li>
                         <li><a href="#">Artikel</a></li>
+                        @if (Auth::check())
+                        <form action="{{ route('logout') }}" method="POST">
+                          <li><a href="/siapaAku">Haloo {{ auth()->user()->name }}<img src="assets/images/log-out.png" alt=""></a></li>
+                        </form>
+                          @else
                         <li><a href="/login">Login <img src="assets/images/log-in.png" alt=""></a></li>
+                        @endif
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
