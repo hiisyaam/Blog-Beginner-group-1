@@ -43,13 +43,10 @@
                         <p>Ada Apa Hari Ini?</p>
                     </a>
                     <ul class="nav">
-                        <li><a href="#" class="active">Kita Aslinya 3</a></li>
+                        <li><a href="/profile">Kita Aslinya 3</a></li>
                         <li><a href="#">Artikel</a></li>
-                        @if (Auth::check())
-                          <li><a href="">Profile</a></li>
-                        @endif
                         <li><a href="/login">Login <img src="assets/images/log-in.png" alt=""></a></li>
-                    </ul>   
+                    </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -69,12 +66,17 @@
       </div>
     </div>
   </div>
-  
+
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Kelompok 1 Aja Deh</p>
+            <style>
+                .babi:hover{
+                    color: #F99;
+                }
+            </style>
+            <p class="babi">Kelompok 1 Aja Deh</p>
         </div>
       </div>
     </div>
@@ -90,5 +92,4 @@
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
   </body>
-
 </html>
