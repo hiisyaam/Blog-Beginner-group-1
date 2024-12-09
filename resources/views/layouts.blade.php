@@ -44,7 +44,7 @@
                     </a>
                     <ul class="nav">
                         <li><a href="/aslinyaTiga">Kita Aslinya 3</a></li>
-                        <li><a href="#">Artikel</a></li>
+                        <li><a href="/artikel">Artikel</a></li>
                         @if (Auth::check())
                         <form action="{{ route('logout') }}" method="POST">
                           <li><a href="/siapaAku">Haloo {{ auth()->user()->name }} <img src="assets/images/log-out.png" alt=""></a></li>
