@@ -20,4 +20,8 @@ require __DIR__.'/auth.php';
 Route::get('/', [Home::class, 'index']);
 Route::get('/aslinyaTiga', [Home::class, 'tiga_orang']);
 Route::get('/siapaAku', [Home::class, 'siapaAku'])->middleware('auth', 'verified');
+<<<<<<< HEAD
 Route::get('/tulisArtikel', [Home::class, 'tulisArtikel'])->middleware('auth', 'verified');
+=======
+Route::get('/artikel', [Home::class, 'artikel']);
+>>>>>>> babfb93dbe8a077cf93de563663ebd12e5a7fe53
