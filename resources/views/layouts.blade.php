@@ -47,7 +47,7 @@
                         <li><a href="#">Artikel</a></li>
                         @if (Auth::check())
                         <form action="{{ route('logout') }}" method="POST">
-                          <li><a href="/siapaAku">Haloo {{ auth()->user()->name }}<img src="assets/images/log-out.png" alt=""></a></li>
+                          <li><a href="/siapaAku">Haloo {{ auth()->user()->name }} <img src="assets/images/log-out.png" alt=""></a></li>
                         </form>
                           @else
                         <li><a href="/login">Login <img src="assets/images/log-in.png" alt=""></a></li>
