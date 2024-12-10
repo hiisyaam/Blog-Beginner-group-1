@@ -1,6 +1,6 @@
 @extends('layouts')
 
-@section('judul', 'Rekomendasi Artikel Hari Ini')
+@section('judul', 'Rekomendasi Artikel')
 
 @section('content')
 <div class="live-stream">
@@ -34,7 +34,6 @@
                 <a href="/artikel/{{$a->id}}" style="text-decoration: none;">
                     <h4 style="justify-content: start;">{{$a->title}}</h4>
                 </a>
-                    <p style="text-align: justify">{{$a->full_text}}</p>
                 </div>
             </div>
         </div>
