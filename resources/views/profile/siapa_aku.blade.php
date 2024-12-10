@@ -15,17 +15,15 @@
                   <div class="col-lg-4 align-self-center">
                     <div class="main-info header-text">
                       <h4>Hai, {{auth()->user()->name}}</h4>
-                      <p>Anda login sebagai {{auth()->user()->role}}</p>
+                      <p>Jangan Lupa Makan ya bub...</p>
                       <div class="main-border-button">
-                        <a href="/logout">Logout Disini</a>
+                        <a href="/tulisArtikel">Tulis Artikel</a>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <ul>
-                      <li>Tambah Artikel <span><a href="#">Here</a></span></li>
-                      <li>Daftar User <span><a href="#">Here</a></span></li>
-                      <li>Kelola Akun <span><a href="#">Here</a></span></li>
+                      <li>Logout Wak <span><a href="/logout">Here</a></span></li>
                     </ul>
                   </div>
                 </div>

@@ -33,7 +33,7 @@
                   </div>
                 </div>
               </div>
-              <p class="text-center mt-5 babi">Gua tunjukinn Gua Tunjukin...xixixi</p>
+              <p class="text-center mt-5 babi">Ikat sepat ikan tongkol nih project kayak KON-</p>
             </div>
           </div>
 </div>

@@ -10,23 +10,23 @@
         </div>
     </div>
     <div class="row">
-        @for ($i = 1; $i <= 12; $i++)
+        @foreach ($artikel as $a)
         <div class="col-lg-3 col-sm-6">
             <div class="item">
                 <div class="thumb">
-                    <img src="https://via.placeholder.com/300x200" alt="Placeholder Image">
+                    <img src="{{$a->image}}" alt="Placeholder Image">
                     <div class="hover-effect">
                         <div class="content">
                         </div>
                     </div>
                 </div>
                 <div class="down-content">
-                    <h4>Artikel {{ $i }}</h4>
-                    <p style="text-align: center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita reiciendis culpa mollitia?</p>
+                    <h4>{{$a->title}}</h4>
+                    <p style="text-align: justify">{{$a->full_text}}</p>
                 </div>
             </div>
         </div>
-        @endfor
+        @endforeach
     </div>
 </div>
 @endsection
