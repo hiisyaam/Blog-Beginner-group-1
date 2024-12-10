@@ -29,3 +29,6 @@ Route::get('/artikel/{id}', [Artikel::class,'detail']);
 Route::get('/artikel/{id}/edit', [Artikel::class, 'edit'])->middleware('auth','verified');
 Route::get('/artikel', [Home::class, 'artikel']);
 
+Route::get('/artikel/delete/{id}', [Artikel::class, 'delete'])->middleware('auth','verified');
+
+

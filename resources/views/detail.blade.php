@@ -17,11 +17,7 @@
 @if (Auth::check())
 <div class="text-end mt-4">
     <a href="/artikel/{{$detail->id}}/edit" class="btn btn-primary btn-sm">Edit</a>
-    <form action="/artikel/{{$detail->id}}" method="post" class="d-inline">
-        @method('delete')
-        @csrf
-        <button type="submit" class="ml-4 btn btn-danger btn-sm">Delete</button>
-    </form>
+    <a href="/artikel/delete/{{$detail->id}}" class="btn btn-danger btn-sm">Delete</a>
 </div>
 @endif
 @endsection

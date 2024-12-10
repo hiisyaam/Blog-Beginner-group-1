@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Log;
 
 class Artikel extends Controller
 {
-
     public function save(Request $request)
     {
         Log::info('Request Data:', $request->all());
@@ -37,18 +36,32 @@ class Artikel extends Controller
         return redirect('/tulisArtikel')->with('success', 'Artikel berhasil ditambahkan.');
     }
 
-    public function detail($id){
+    public function detail($id)
+    {
         $detail = Article::findOrFail($id);
         $penulis = Article::findOrFail($id)->penulis;
         $kategori = Article::findOrFail($id)->category;
         return view('detail', compact('detail', 'penulis', 'kategori'));
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $detail = Article::findOrFail($id);
         $penulis = Article::findOrFail($id)->penulis;
         $kategori = Article::findOrFail($id)->category;
         return view('edit', compact('detail', 'penulis', 'kategori'));
     }
 
+    public function delete($id)
+    {
+        $article = Article::findOrFail($id);
+
+        try {
+            $article->delete();
+            return redirect('/artikel')->with('success', 'Artikel berhasil dihapus.');
+        } catch (\Exception $e) {
+            Log::error('Error deleting article:', ['id' => $id, 'message' => $e->getMessage()]);
+            return redirect('/artikel')->with('error', 'Gagal menghapus artikel.');
+        }
+    }
 }
