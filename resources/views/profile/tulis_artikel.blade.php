@@ -29,7 +29,7 @@ textarea {
 }
 </style>
     <h1 class="text-center">Mari Tulis Artikel</h1>
-    <form action="proses.tulis.artikel" method="POST" enctype="multipart/form-data">
+    <form action="/saveArtikel" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group mb-3">
         <label for="judul">Judul Artikel</label>
@@ -52,9 +52,10 @@ textarea {
         <label for="gambar">Upload Gambar</label>
         <input type="file" id="gambar" name="gambar" accept="image/*" required>
     </div>
+    <input type="hidden" name="created_at" value="<?= date('Y-m-d H:i:s'); ?>">
     <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
     <div class="text-end">
-        <button type="submit" class="btn btn-success">Simpan</button>
+        <button type="submit" class="btn btn-outline-light">Simpan</button>
     </div>
 </form>
 

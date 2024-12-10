@@ -19,13 +19,12 @@ class Home extends Controller
         return view('profile.siapa_aku');
     }
 
-<<<<<<< HEAD
-    public function tulisArtikel(){
+public function tulisArtikel(){
         $categories = Category::all();
         return view('profile.tulis_artikel', compact('categories'));
-=======
+    }
     public function artikel(){
         return view('artikelpage');
->>>>>>> babfb93dbe8a077cf93de563663ebd12e5a7fe53
+
     }
 }
