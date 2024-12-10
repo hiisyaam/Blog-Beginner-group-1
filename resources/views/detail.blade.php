@@ -16,7 +16,7 @@
 
 @if (Auth::check())
 <div class="text-end mt-4">
-    <a href="/artikel/{{$detail->id}}/edit" class="btn btn-primary btn-sm">Edit</a>
+    <a href="/artikel/edit/{{$detail->id}}" class="btn btn-primary btn-sm">Edit</a>
     <a href="/artikel/delete/{{$detail->id}}" class="btn btn-danger btn-sm">Delete</a>
 </div>
 @endif

@@ -49,7 +49,7 @@ class Artikel extends Controller
         $detail = Article::findOrFail($id);
         $penulis = Article::findOrFail($id)->penulis;
         $kategori = Article::findOrFail($id)->category;
-        return view('edit', compact('detail', 'penulis', 'kategori'));
+        return view('editArtikel', compact('detail', 'penulis', 'kategori'));
     }
 
     public function delete($id)
