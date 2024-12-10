@@ -10,12 +10,12 @@
 
     <title>@yield('judul','Ada Apa Hari Ini')</title>
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="/assets/css/templatemo-cyborg-gaming.css">
+    <link rel="stylesheet" href="/assets/css/owl.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
   </head>
@@ -47,10 +47,10 @@
                         <li><a href="/artikel">Artikel</a></li>
                         @if (Auth::check())
                         <form action="{{ route('logout') }}" method="POST">
-                          <li><a href="/siapaAku">Haloo {{ auth()->user()->name }} <img src="assets/images/log-out.png" alt=""></a></li>
+                          <li><a href="/siapaAku">Haloo {{ auth()->user()->name }} <img src="/assets/images/log-out.png" alt=""></a></li>
                         </form>
                           @else
-                        <li><a href="/login">Login <img src="assets/images/log-in.png" alt=""></a></li>
+                        <li><a href="/login">Login <img src="/assets/images/log-in.png" alt=""></a></li>
                         @endif
                     </ul>
                     <a class='menu-trigger'>
@@ -90,12 +90,12 @@
 
 
 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/js/isotope.min.js"></script>
+  <script src="/assets/js/owl-carousel.js"></script>
+  <script src="/assets/js/tabs.js"></script>
+  <script src="/assets/js/popup.js"></script>
+  <script src="/assets/js/custom.js"></script>
   </body>
 </html>

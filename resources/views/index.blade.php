@@ -4,5 +4,5 @@
 
 @section('content')
     <h1>Selamat Datang di AAHI</h1>
-    <p>Isi Disini Brokk</p>
+    <p>Ada Apa Hari Ini?</p>
 @endsection

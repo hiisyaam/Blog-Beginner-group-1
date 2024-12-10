@@ -37,4 +37,18 @@ class Artikel extends Controller
         return redirect('/tulisArtikel')->with('success', 'Artikel berhasil ditambahkan.');
     }
 
+    public function detail($id){
+        $detail = Article::findOrFail($id);
+        $penulis = Article::findOrFail($id)->penulis;
+        $kategori = Article::findOrFail($id)->category;
+        return view('detail', compact('detail', 'penulis', 'kategori'));
+    }
+
+    public function edit($id){
+        $detail = Article::findOrFail($id);
+        $penulis = Article::findOrFail($id)->penulis;
+        $kategori = Article::findOrFail($id)->category;
+        return view('edit', compact('detail', 'penulis', 'kategori'));
+    }
+
 }
