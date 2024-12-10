@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained();
             $table->timestamps();
         });
-        DB::statement('ALTER TABLE articles ADD image BLOB NULL');
+        DB::statement('ALTER TABLE articles ADD image MEDIUMBLOB NULL');
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Models\Category;
 
 class Artikel extends Controller
 {
@@ -47,10 +48,38 @@ class Artikel extends Controller
     public function edit($id)
     {
         $detail = Article::findOrFail($id);
-        $penulis = Article::findOrFail($id)->penulis;
-        $kategori = Article::findOrFail($id)->category;
-        return view('editArtikel', compact('detail', 'penulis', 'kategori'));
+        $categories = Category::all();
+        $kategori = Category::findOrFail($detail->category_id);
+        return view('editArtikel',compact('detail', 'categories','kategori'));
     }
+
+    public function update(Request $request, $id){
+    $validatedData = $request->validate([
+        'title' => 'required|string|max:255',
+        'category_id' => 'required|exists:categories,id',
+        'full_text' => 'required',
+        'image' => 'nullable|image|max:2048'
+    ]);
+
+    $article = Article::findOrFail($id);
+
+    
+    if ($request->hasFile('image')) {
+        $imageBinary = file_get_contents($request->file('image')->getRealPath());
+        $article->image = $imageBinary;
+    }
+
+    
+    $article->title = $validatedData['title'];
+    $article->category_id = $validatedData['category_id'];
+    $article->full_text = $validatedData['full_text'];
+
+    $article->save();
+
+    
+    return redirect('/artikel');
+}
+
 
     public function delete($id)
     {

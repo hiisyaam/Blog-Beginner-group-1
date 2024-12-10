@@ -33,7 +33,7 @@
                   </div>
                 </div>
               </div>
-              <p class="text-center mt-5 babi">Ikat sepat ikan tongkol nih project kayak KON-</p>
+              <p class="text-center mt-5 babi">Jangan salah <s>pasangan</s> jurusan</p>
             </div>
           </div>
 </div>

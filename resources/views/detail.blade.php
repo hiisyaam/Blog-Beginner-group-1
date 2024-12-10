@@ -22,13 +22,8 @@
 
 @if (Auth::check())
 <div class="text-end mt-4">
-<<<<<<< HEAD
     <a href="/artikel/edit/{{$detail->id}}" class="btn btn-primary btn-sm">Edit</a>
     <a href="/artikel/delete/{{$detail->id}}" class="btn btn-danger btn-sm">Delete</a>
-=======
-    <a href="/artikel/{{ $detail->id }}/edit" class="btn btn-primary btn-sm">Edit</a>
-    <a href="/artikel/delete/{{ $detail->id }}" class="btn btn-danger btn-sm">Delete</a>
->>>>>>> 5c5e591378b08e70af4315ebd3fc4872f226969d
 </div>
 @endif
 @endsection
