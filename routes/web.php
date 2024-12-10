@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\Admin;
 
 
 Route::get('/dashboard', function () {
@@ -16,6 +17,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
 Route::get('/', [Home::class, 'index']);
 Route::get('/aslinyaTiga', [Home::class, 'tiga_orang']);
 Route::get('/siapaAku', [Home::class, 'siapaAku'])->middleware('auth', 'verified');
+
+Route::get('/tulisArtikel', [Home::class, 'tulisArtikel'])->middleware('auth', 'verified');
+Route::get('/artikel', [Home::class, 'artikel']);
+
