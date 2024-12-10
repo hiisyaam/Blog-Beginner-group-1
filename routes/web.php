@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\Artikel;
 use App\Http\Controllers\Admin;
 
 
@@ -23,5 +24,6 @@ Route::get('/aslinyaTiga', [Home::class, 'tiga_orang']);
 Route::get('/siapaAku', [Home::class, 'siapaAku'])->middleware('auth', 'verified');
 
 Route::get('/tulisArtikel', [Home::class, 'tulisArtikel'])->middleware('auth', 'verified');
+Route::post('/saveArtikel', [Artikel::class,'save'])->middleware('auth','verified');
 Route::get('/artikel', [Home::class, 'artikel']);
 
